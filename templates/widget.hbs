@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<!--[if IE 7]><html class="ie7 oldie" lang="en"><![endif]-->
+<!--[if IE 8]><html class="ie8 oldie" lang="en"><![endif]-->
+<!--[if gt IE 8]><!--><html lang="en"><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Referral Discounts</title>
+	<style>
+		html {
+			background: transparent;
+		}
+	</style>
+	
+	<!--[if lt IE 9]>
+	    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+	{{! jsDependencies}}
+	
+	<script src="{{assets "javascripts/widget.js"}}"></script>
+	<link rel="stylesheet" media="all" href="{{assets "css/widget.css"}}">
+	
+</head>
+<body class="modalPopup">
+
+	<div class="container">
+
+		<header id="header">
+			<h1>Referral Discount</h1>
+			<a href="#close" class="close" onclick="close_widget()">Close</a>
+		</header>
+		<!-- / header -->
+		<hr />
+
+		<div id="content">
+
+			<section class="start-content active">
+			<h2><span>Save up to 100%</span> off your bill!</h2>
+
+			<ul class="steps">
+				<li>
+					<span class="number">1</span>
+					<p> <span>Give</span>
+						friends 10% off with a coupon code
+					</p>
+				</li>
+				<li>
+					<span class="number">2</span>
+					<p>
+						<span>Friends</span>
+						subscribe with a discount
+					</p>
+				</li>
+				<li>
+					<span class="number">3</span>
+					<p>
+						<span>Receive</span>
+						10% off your bill for  1 year!
+					</p>
+				</li>
+			</ul>
+			<!-- / steps -->
+			
+			<section class="users-and-progress">
+				<div class="overflow">
+					<ul class="users slides">
+
+                        {{> partialExampleTrial}}
+
+                        {{> partialExampleEarned}}
+                        
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+					</ul>
+				</div>
+				<!-- / overflow -->
+
+				<div class="progress-bar no-progress">
+					<div class="bar" data-width="0">
+						<span>100% in referral savings available</span>
+					</div>
+				</div>
+				<!-- / progress-bar -->
+
+			</section>
+			<!-- / users-and-progress -->
+
+			<section class="message">
+				<form action="#">
+					<label for="message" class="label">Message</label>
+					<textarea readonly name="message" id="message" class="content">Sign up for a paid account in our app and we both get 10% off our monthly bill. Use this link or coupon DEMOCODE http://ssqt.ch/16sO0cT</textarea>
+				</form>
+			</section>
+			<!-- / message -->
+
+			<section class="share">
+				<div class="options">
+					<p class="share-txt">Share:</p>
+					<ul>
+						<li class="mail">
+							<a class="emailShare" target="_blank">Email</a>
+						</li>
+						<li class="facebook">
+							<a href="#" onclick="share_prompt()">Facebook</a>
+						</li>
+						<li class="twitter">
+							<a href="#" onclick="tweet_prompt()">Twitter</a>
+						</li>
+					</ul>
+				</div>
+
+				<div class="copy-area">
+					<div class="label">Share link:</div>
+					<div class="content" id="copy_content">http://ssqt.ch/16sO0cT</div>
+					<button class="copy" data-clipboard-target="copy_content">Copy Link</button>
+				</div>
+				
+				<a href="#" class="learn">Learn More</a>
+
+			</section>
+			<!-- / share -->
+		
+		</section>
+		<!-- / start-content -->
+		
+		<section class="faq-content hide">
+			<h2><span>Frequently Asked Questions</span></h2>
+
+			<div class="scroll-pane">
+				<dl>
+					
+						<dt>How do referrals work?</dt>
+						<dd>When you refer a friend to a paid account you get 10% off of your monthly bill. A referral is claimed when your unique coupon code or link is used when a friend sign ups for a paid account.</dd>
+					
+						<dt>Is there a maximum discount I can earn through referrals?</dt>
+						<dd>Absolutely not! With 10 active referrals you can discount your bill by 100% and reduce your monthly bill to zero.</dd>
+					
+						<dt>How long does each discount last?</dt>
+						<dd>You keep your discount for as long as your friend keeps their paid account, or for a maximum of 12 months.</dd>
+					
+						<dt>Can I keep getting discounts after 12 months?</dt>
+						<dd>Yes! You just need to refer more people. Each individual referral gives you a discount for up to 12 months.</dd>
+					
+						<dt>If I already have 100% off can I keep referring?</dt>
+						<dd>Of course! Any new referrals you earn will take the place of your oldest dated referrals. This ensures you’ll keep your discounts as long as possible.</dd>
+					
+						<dt>What happens if my friend signs up for a different subscription level?</dt>
+						<dd>Discounts work between all different level subscriptions.</dd>
+					
+				</dl>
+			</div>
+		</section>
+		<!-- / faq content -->
+			
+		</div>
+		<!-- / content -->
+		<hr />
+		
+		<footer id="footer">
+			<a href="#" class="back display-none">Back</a>
+			<p>Powered by <a href="http://www.referralsaasquatch.com" target="_blank">Referral SaaSquatch</a></p>
+		</footer>
+		<!-- / footer -->
+
+	</div>
+	<div id="meta-data"></div>
+	<!-- / container -->
+
+</body>
+</html>

@@ -212,7 +212,7 @@ Handle graphical user interactions in the widget
 		copyToClipboard: function() {
 			alert(window.squatch.asset.zeroclipboard);
 			var clip = new ZeroClipboard( $('.copy'), {
-				moviePath: "/assets/javascripts/ZeroClipboard.swf",
+				moviePath: window.squatch.asset.zeroclipboard,
 				hoverClass: "hover"
 			});
 

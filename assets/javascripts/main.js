@@ -3,6 +3,9 @@
 Handle graphical user interactions in the widget
 
 *******************************************************************************/
+
+ZeroClipboard.setDefaults( { moviePath: window.squatch.asset.zeroclipboard } );
+
 (function($) {
 
 	var debug = false,
@@ -210,7 +213,6 @@ Handle graphical user interactions in the widget
 		 * Copy to clipboard
 		 */
 		copyToClipboard: function() {
-			ZeroClipboard.setDefaults( { moviePath: window.squatch.asset.zeroclipboard } );
 			alert(window.squatch.asset.zeroclipboard);
 			var clip = new ZeroClipboard( $('.copy'), {
 				moviePath: window.squatch.asset.zeroclipboard, //"/assets/javascripts/ZeroClipboard.swf", // window.squatch.asset.zeroclipboard,

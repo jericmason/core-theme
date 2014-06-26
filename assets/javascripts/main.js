@@ -3,9 +3,6 @@
 Handle graphical user interactions in the widget
 
 *******************************************************************************/
-
-ZeroClipboard.setDefaults( { moviePath: window.squatch.asset.zeroclipboard } );
-
 (function($) {
 
 	var debug = false,

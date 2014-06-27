@@ -211,6 +211,7 @@ Handle graphical user interactions in the widget
 		 */
 		copyToClipboard: function() {
 			var clip = new ZeroClipboard( $('.copy'), {
+				trustedDomains: [ "*" ],
 				moviePath: window.squatch.asset.zeroclipboard,
 				hoverClass: "hover"
 			});

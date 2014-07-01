@@ -213,7 +213,8 @@ Handle graphical user interactions in the widget
 			var clip = new ZeroClipboard( $('.copy'), {
 				trustedDomains: [ "*" ],
 				moviePath: window.squatch.asset.zeroclipboard,
-				hoverClass: "hover"
+				hoverClass: "hover",
+				useNoCache: true
 			});
 
 			clip.on( 'complete', function(client, args) {

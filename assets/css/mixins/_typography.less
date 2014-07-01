@@ -1,0 +1,35 @@
+// TYPOGRAPHY MIXINS
+// ========================================
+
+// Custom font size
+.font_size(@size, @base: @baseFontSize) {
+	@fontSize: percentage(@size/@base);
+	font-size: @fontSize;
+}
+
+// Text overflow
+.text_overflow() {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+
+// Safari font smoothing
+.font_smoothing() {
+	.set() {
+		-webkit-font-smoothing: antialiased;
+		text-rendering: optimizeLegibility;
+	}
+
+	.reset() {
+		-webkit-font-smoothing: subpixel-antialiased;
+	}
+}
+
+// Input focus
+.field_focus {
+	&:focus {
+		outline: none;
+		border-color: #999;
+	}
+}

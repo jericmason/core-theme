@@ -1,0 +1,31 @@
+#accessibility-nav {
+    position: absolute;
+    top: 0;
+    left: -9999em;
+    z-index: 1000;
+
+    a {
+        position: absolute;
+        top: 0;
+        white-space: nowrap;
+        color: #000;
+
+		&:active,
+		&:focus {
+			left: 9999em;
+		}
+    }
+}
+
+.hide,
+.screen-reader-text {
+	position: absolute;
+	left: -9999em;
+	top: 0;
+	text-align: left;
+	text-direction: ltr;
+}
+
+.display-none {
+    display: none;
+}

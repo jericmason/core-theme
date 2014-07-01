@@ -1,0 +1,13 @@
+// custom mixins
+
+.hover-top(@var) when (@var) {
+	position: relative;
+	display: none;
+	z-index: 1;
+}
+
+.hover-top(@var) when not (@var) {
+	position: relative;
+	display: none;
+	z-index: 2;
+}

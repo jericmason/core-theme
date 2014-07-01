@@ -210,9 +210,9 @@ Handle graphical user interactions in the widget
 		 * Copy to clipboard
 		 */
 		copyToClipboard: function() {
-			alert(window.squatch.asset.zeroclipboard);
 			var clip = new ZeroClipboard( $('.copy'), {
-				moviePath: window.squatch.asset.zeroclipboard,  // "/assets/javascripts/ZeroClipboard.swf", // window.squatch.asset.zeroclipboard,
+				trustedDomains: [ "*" ],
+				moviePath: window.squatch.asset.zeroclipboard,
 				hoverClass: "hover"
 			});
 

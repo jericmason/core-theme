@@ -214,7 +214,7 @@ Handle graphical user interactions in the widget
 				trustedDomains: [ "*" ],
 				moviePath: window.squatch.asset.zeroclipboard,
 				hoverClass: "hover",
-				cacheBust: true
+				cacheBust: false
 			});
 
 			clip.on( 'complete', function(client, args) {

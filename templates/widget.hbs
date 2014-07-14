@@ -148,6 +148,10 @@
 
                 {{#block "header" }}
     			<h2><span>Save up to 100%</span> off your bill!</h2>
+    			
+    			{{#each referrals}}
+    				ID: {{referredUser.accountId}} URL: {{assets "css/widget.css"}}
+    			{{/each}}
     
     			<ul class="steps">
     				<li>

@@ -6,7 +6,7 @@
 	<meta charset="utf-8">
 	<title>Referral Discounts</title>
 
-	<link rel="stylesheet" media="all" href="{{assets "css/vanilla-theme.css?v=3"}}">
+	<link rel="stylesheet" media="all" href="{{assets "css/vanilla-theme.css"}}">
 
 	<style>
 		html {
@@ -127,7 +127,7 @@
 	{{squatchHead}}
 
 	<script src="//cdnjs.cloudflare.com/ajax/libs/zeroclipboard/2.1.3/ZeroClipboard.min.js"></script>
-	<script src="{{assets "javascripts/main.js?v=8"}}"></script>
+	<script src="{{assets "javascripts/main.js"}}"></script>
 	<link rel="stylesheet" media="all" href="{{assets "css/widget.css"}}">
 	<link rel="stylesheet" media="all" href="{{assets "styles.css"}}">
 	
@@ -148,7 +148,7 @@
 
                 {{#block "header" }}
     			<h2><span>Save up to 100%</span> off your bill!</h2>
-    
+    			
     			<ul class="steps">
     				<li>
     					<span class="number">1</span>
@@ -173,6 +173,12 @@
     			</ul>
     			<!-- / steps -->
 			    {{/block}}
+
+			PROGRESS
+			{{#each referrals}}
+    				ID: {{referredUser.accountId}} URL: {{assets "css/widget.css"}}
+    			{{/each}}
+    			REFERRALS
 
 			
 			<section class="users-and-progress">
@@ -199,6 +205,127 @@
 
                         {{> partialEmptyHead}}
 
+                        {{> partialExampleTrial}}
+
+                        {{> partialExampleEarned}}
+                        
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialExampleTrial}}
+
+                        {{> partialExampleEarned}}
+                        
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialExampleTrial}}
+
+                        {{> partialExampleEarned}}
+                        
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialExampleTrial}}
+
+                        {{> partialExampleEarned}}
+                        
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialExampleTrial}}
+
+                        {{> partialExampleEarned}}
+                        
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+                        
+                                                {{> partialExampleTrial}}
+
+                        {{> partialExampleEarned}}
+                        
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        {{> partialEmptyHead}}
+
+                        
 					</ul>
 				</div>
 				<!-- / overflow -->

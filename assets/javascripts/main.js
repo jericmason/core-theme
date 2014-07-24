@@ -216,7 +216,7 @@ Handle graphical user interactions in the widget
 				hoverClass: "hover"
 			});
 
-			clip.on( 'complete', function(client, args) {
+			clip.on( 'aftercopy', function(client, args) {
 				_log('clicked copy link');
 				analytics.track(squatch.analytics.events.COPY_LINK);
 				$('.copy').html('Copied!');

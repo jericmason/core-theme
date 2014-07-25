@@ -1,6 +1,6 @@
 <li class="examplereferred">
 	<a href="#" class="small-avatar">
-	  {{#if(referredUser.imageUrl}}
+	  {{#if referredUser.imageUrl}}
   	  <img src="https://www.gravatar.com/avatar/0?d=blank" class="customprofileimg" data-profile-src="{{referredUser.imageUrl}}" alt="">
   	{{else}}
   		<img src="https://www.gravatar.com/avatar/0?d=blank" alt="">
@@ -8,7 +8,7 @@
 	</a>
 	<div class="content register">
 		<a href="#" class="avatar">
-  		{{#if(referredUser.imageUrl}}
+  		{{#if referredUser.imageUrl}}
 	  		<img src="https://www.gravatar.com/avatar/0?d=blank" alt="">
 	  	{{else}}
   	  	<img src="https://www.gravatar.com/avatar/0?d=blank" alt="">
@@ -16,7 +16,7 @@
 		</a>
 		<h3>{{referredUser.firstName}} {{referredUser.lastName}}</h3>
 		<p>
-			{{#unless(paid)}}PAID {{/#unless}}User since {{dateReferred}}
+			{{#unless paid}}PAID {{/#unless}}User since {{dateReferred}}
 		</p>
 		<a class="remind grey" target="_blank" data-address="{{referredUser.email}}">Remind Your Friend!</a>
 	</div>

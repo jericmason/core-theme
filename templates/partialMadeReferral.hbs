@@ -9,9 +9,9 @@
 	<div class="content register">
 		<a href="#" class="avatar">
   		{{#if referredUser.imageUrl}}
-	  		<img src="https://www.gravatar.com/avatar/0?d=blank" alt="">
+	  		<img src="https://www.gravatar.com/avatar/0?d=blank" class="customprofileimg" data-profile-src="{{referredUser.imageUrl}}" alt="">
 	  	{{else}}
-  	  	<img src="https://www.gravatar.com/avatar/0?d=blank" alt="">
+  	  		<img src="https://www.gravatar.com/avatar/0?d=blank" alt="">
 	  	{{/if}}
 		</a>
 		<h3>{{referredUser.firstName}} {{referredUser.lastName}}</h3>

@@ -26,9 +26,9 @@
 		window.squatch = window.squatch || {};
 		
 		window.squatch.user = {
-			code: 'MIKEMOUSEUNPLUG',
+			code: '{{user.referralCode}}',
 			rewardAggregates:  {{rewardBalances}},
-			sharelink: 'http://ssqt.ch/1kPBwEz',
+			sharelink: '{{shareLinks.shareLink}}',
 			email: {
 				share : {
 					subject: 'Email%20Share%20Subject',
@@ -54,11 +54,11 @@
 				message: 'Twitter+%0D+MIKENERFERSTON+http%3A%2F%2Fssqt.ch%2F1kPBwEB+share+message'
 			},
 			mobile: {
-				sharelink : 'http://ssqt.ch/1kPByMJ',
+				sharelink : '{{shareLinks.shareLink}}',
 				emailBody: 'Email+%0D+MIKENERFERSTON+http%3A%2F%2Fssqt.ch%2F1kPByMM+share+message',
 				facebookBody: 'Facebook+share+MIKENERFERSTON+http%3A%2F%2Fssqt.ch%2F1kPBwEC+message',
 				twitterBody: 'Twitter+%0D+MIKENERFERSTON+http%3A%2F%2Fssqt.ch%2F1kPByMG+share+message',
-				twitterShareLink : 'http://ssqt.ch/1kPByMG',
+				twitterShareLink : '{{shareLinks.mobileTwitterShareLink}}',
 				facebookShareLink : 'http://ssqt.ch/1kPBwEC',
 				emailShareLink: 'http://ssqt.ch/1kPByMM'
 			},
@@ -66,18 +66,18 @@
 		};
 
 		window.squatch.analytics = {
-				apikey : 'dxgtvw8hp1',
+				apikey : '{{segmentApiKey}}',
 				attributes : {
-					tenant : 'test_ancxro4pjpbu2',
-					userId : '5387fb97e4b04d8664f2aca3_5387fb8de4b004507de395ce',
-					accountId : '5387fb97e4b04d8664f2aca3'
+					tenant : '{{tenantAlias}}',
+					userId : '{{user.id}}',
+					accountId : '{{accountId}}'
 				},
 	    		user: {
-	    			ident: '5387fb97e4b04d8664f2aca3_5387fb8de4b004507de395ce',
+	    			ident: '{{user.id}}',
 	    			traits: {
-							tenant : 'test_ancxro4pjpbu2',
-							accountId : '5387fb97e4b04d8664f2aca3'
-					       }
+					tenant : '{{tenantAlias}}',
+					accountId : '{{accountId}}'
+			       }
 	    		},
 	    		events: {
 	    			OPENED_WIDGET : 'Opened Widget',
@@ -98,7 +98,7 @@
 		};
 		
 		window.squatch.mode = {
-				widgetMode: 'EMBED',
+				widgetMode: '{{mode}}',
 	   			POPUP_MODE : 'POPUP',
 	   			EMBED_MODE : 'EMBED',
 	   			DEMO_MODE : 'DEMO',
@@ -171,19 +171,18 @@
 
                         {{> partialExampleEarned}}
                         
-                        {{> partialEmptyHead}}
-
 			{{#each referrals}}
     				{{> partialMadeReferral}}
     			{{/each}}
 
-                        
+                        {{> partialEmptyHead}}
+
 					</ul>
 				</div>
 				<!-- / overflow -->
 
 				<div class="progress-bar no-progress">
-					<div class="bar" data-width="{{rewardBalances.[0].totalDiscountPercent}}">
+					<div class="bar" data-width="{{rewardBalances.0.totalDiscountPercent}}">
 						<span>100% in referral savings available</span>
 					</div>
 				</div>
@@ -195,7 +194,7 @@
 			<section class="message">
 				<form action="#">
 					<label for="message" class="label">Message</label>
-					<textarea readonly name="message" id="message" class="content">Sign up for a paid account in our app and we both get 10% off our monthly bill. Use this link or coupon DEMOCODE http://ssqt.ch/16sO0cT</textarea>
+					<textarea readonly name="message" id="message" class="content">Sign up for a paid account in our app and we both get 10% off our monthly bill. Use this link or coupon {{user.referralCode}} {{shareLinks.shareLink}}</textarea>
 				</form>
 			</section>
 			<!-- / message -->

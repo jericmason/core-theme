@@ -27,7 +27,7 @@
 		
 		window.squatch.user = {
 			code: '{{user.referralCode}}',
-			rewardAggregates:  {{rewardBalances}},
+			rewardAggregates:  JSON.parse({{rewardBalances}}),
 			rewardTest: {{rewardBalances.0.totalDiscountPercent}},
 			sharelink: '{{shareLinks.shareLink}}',
 			email: {

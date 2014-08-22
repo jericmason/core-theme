@@ -54,7 +54,7 @@
 				redirectUrl: 'http://staging.referralsaasquatch.com/widget/close'
 			},
 			twitter: {
-				message: '{{urlencode ("Twitter %s %s share message" user.referralCode shareLinks.twitterShareLink)}}'
+				message: '{{urlencode (stringFormat "Twitter %s %s share message" user.referralCode shareLinks.twitterShareLink)}}'
 			},
 			mobile: {
 				sharelink : '{{shareLinks.shareLink}}',

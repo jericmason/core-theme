@@ -38,7 +38,7 @@
 				reminder : {
 					subject: '{{urlencode "Email Reminder Subject" space="%20"}}',
 					body: '{{urlencode (stringFormat "Email Reminder share message %s %s" user.referralCode shareLinks.emailShareLink) space="%20"}}',
-					mailToLink: '{{urlencode (stringFormat "mailto:?subject=Email Reminder Subject&body=Email %s %s reminder message" user.referralCode shareLinks.emailShareLink) space="%20"}}',
+					mailToLink: 'mailto:{{urlencode (stringFormat "subject=Email Reminder Subject&body=Email %s %s reminder message" user.referralCode shareLinks.emailShareLink) space="%20"}}',
 				},
 				type: 'UNKNOWN',
 				testType: '{{substring "lowercaseteststring" 0 1}}',

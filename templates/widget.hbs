@@ -33,7 +33,7 @@
 			email: {
 				share : {
 					subject: '{{urlencode "Email Share Subject" space="%20"}}',
-					body: '{{urlencode (stringFormat "Email %s %s share message", user.referralCode, shareLinks.emailShareLink) space="%20"}}',
+					body: '{{urlencode (stringFormat "Email %s %s share message" user.referralCode shareLinks.emailShareLink) space="%20"}}',
 					mailToLink: 'mailto:?subject=Email%20Share%20Subject&body=Email%20%0D%20MIKENERFERSTON%20http%3A%2F%2Fssqt.ch%2F1kPByMI%20share%20message',
 				},
 				reminder : {

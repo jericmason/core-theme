@@ -34,36 +34,36 @@
 				share : {
 					subject: '{{urlencode "Email Share Subject" space="%20"}}',
 					body: '{{urlencode (stringFormat "Email %s %s share message" user.referralCode shareLinks.emailShareLink) space="%20"}}',
-					mailToLink: 'mailto:?subject=Email%20Share%20Subject&body=Email%20%0D%20MIKENERFERSTON%20http%3A%2F%2Fssqt.ch%2F1kPByMI%20share%20message',
+					mailToLink: '{{urlencode (stringFormat "mailto:?subject=Email Share Subject&body=Email %s %s share message" user.referralCode shareLinks.emailShareLink) space="%20"}}',
 				},
 				reminder : {
-					subject: 'Email%20Reminder%20Subject',
-					body: 'Email%20Reminder%20%0D%20share%20message%20MIKENERFERSTON%20http%3A%2F%2Fssqt.ch%2F1kPBwEz',
-					mailToLink: 'mailto:?subject=Email%20Reminder%20Subject&body=Email%20Reminder%20%0D%20share%20message%20MIKENERFERSTON%20http%3A%2F%2Fssqt.ch%2F1kPBwEz',				
+					subject: '{{urlencode "Email Reminder Subject" space="%20"}}',
+					body: '{{urlencode (stringFormat "Email Reminder share message %s %s" user.referralCode shareLinks.emailShareLink) space="%20"}}',
+					mailToLink: '{{urlencode (stringFormat "mailto:?subject=Email Reminder Subject&body=Email %s %s reminder message" user.referralCode shareLinks.emailShareLink) space="%20"}}',
 				},
 				type: 'UNKNOWN',
 				testType: '{{substring "lowercaseteststring" 0 1}}',
 				testGravatar: '{{gravatar "Loganvolkers@gmail.com" default="blank"}}'
 			},
 			facebook: {
-				title: 'Have+you+used+our+service+before%3F',
-				summary: 'Facebook+share+MIKENERFERSTON+http%3A%2F%2Fssqt.ch%2F1kPByME+message',
-				link: 'http%3A%2F%2Fssqt.ch%2F1kPByME',
-				shareImage: 'http%3A%2F%2Fwww.referralsaasquat.netdna-cdn.com%2Fwp-content%2Fthemes%2Fdisillusion%2Fimg%2Fheaderimac3x.png',
+				title: '{{urlencode "Have you used our service before"}},
+				summary: '{{urlencode (stringFormat "Facebook share %s %s message" user.referralCode shareLinks.facebookShareLink)}},
+				link: '{{shareLinks.facebookShareLink}}',
+				shareImage: '{{urlencode "http://www.referralsaasquat.netdna-cdn.com/Fwp-content%2Fthemes/Fdisillusion/Fimg/Fheaderimac3x.png"}},
 				appId: '396367127152561',
 				redirectUrl: 'http://staging.referralsaasquatch.com/widget/close'
 			},
 			twitter: {
-				message: 'Twitter+%0D+MIKENERFERSTON+http%3A%2F%2Fssqt.ch%2F1kPBwEB+share+message'
+				message: '{{urlencode ("Twitter %s %s share message" user.referralCode shareLinks.twitterShareLink)}}'
 			},
 			mobile: {
 				sharelink : '{{shareLinks.shareLink}}',
-				emailBody: 'Email+%0D+MIKENERFERSTON+http%3A%2F%2Fssqt.ch%2F1kPByMM+share+message',
-				facebookBody: 'Facebook+share+MIKENERFERSTON+http%3A%2F%2Fssqt.ch%2F1kPBwEC+message',
-				twitterBody: 'Twitter+%0D+MIKENERFERSTON+http%3A%2F%2Fssqt.ch%2F1kPByMG+share+message',
+				emailBody: '{{urlencode (stringFormat "Email %s %s share message" user.referralCode shareLinks.mobileEmailShareLink)}}',
+				facebookBody: '{{urlencode (stringFormat "Facebook share %s %s message" user.referralCode shareLinks.mobileFacebookShareLink)}},
+				twitterBody: '{{urlencode (stringFormat "Twitter %s %s share message" user.referralCode shareLinks.mobileTwitterShareLink)}},
 				twitterShareLink : '{{shareLinks.mobileTwitterShareLink}}',
-				facebookShareLink : 'http://ssqt.ch/1kPBwEC',
-				emailShareLink: 'http://ssqt.ch/1kPByMM'
+				facebookShareLink : '{{shareLinks.mobileFacebookShareLink}}',
+				emailShareLink: '{{shareLinks.mobileEmailShareLink}}'
 			},
 			fallbackImg: 'https://www.gravatar.com/avatar/0?d=blank'
 		};

@@ -1,0 +1,37 @@
+{
+  "title": "Share Messaging",
+  "type": "object",
+  "properties": {
+    "emailShareSubject": {
+      "type": "string",
+      "description": "Email share subject",
+      "minLength": 4,
+      "default": "Have you used our service before?"
+    },
+    "emailShareBody": {
+      "type": "string",
+      "description": "Email share subject",
+      "minLength": 4,
+      "default": "Sign up for a paid account in our app and we both get 10% off our monthly bill. Use this link or coupon {0} {1}"
+    },
+    "fbShareSubject": {
+      "type": "string",
+      "description": "Email share subject",
+      "minLength": 4,
+      "default": "Have you used our service before?"
+    },
+    "fbShareBody": {
+      "type": "string",
+      "description": "Email share subject",
+      "minLength": 4,
+      "default": "Sign up for a paid account in our app and we both get 10% off our monthly bill. Use this link or coupon {0} {1}"
+    },
+    "twitterShareBody": {
+      "type": "string",
+      "description": "Twitter share body",
+      "minLength": 4,
+      "default": "Sign up for a paid account in our app and we both get 10% off our monthly bill. Use this link or coupon {0} {1}"
+    }
+  },
+  "required": ["emailShareBody", "emailShareSubject"]
+}
